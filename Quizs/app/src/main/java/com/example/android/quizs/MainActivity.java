@@ -1,11 +1,15 @@
-import android.support.v7.app.AppCompatActivity;
+package com.example.android.quizs;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
-
 import com.example.android.quizs.R;
 
 import static android.R.attr.name;
