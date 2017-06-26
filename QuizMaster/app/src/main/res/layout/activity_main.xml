@@ -1,6 +1,3 @@
-
-
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scroll"
@@ -10,47 +7,47 @@
 
 
     <LinearLayout
+        android:id="@+id/LINEAR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
 
-        android:id="@+id/LINEAR">
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Who is the Richest Man in the World?"
-            android:textSize="24dp"/>
+            android:textSize="24dp" />
+
         <EditText
+            android:id="@+id/NAME"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Name (first letter of name and surname in capital)"
+            android:inputType="textCapSentences|textAutoCorrect"
             android:paddingBottom="34dp"
-            android:paddingTop="16dp"
-            android:id="@+id/NAME"
-            android:inputType=
-                "textCapSentences|textAutoCorrect"/>
+            android:paddingTop="16dp" />
 
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/download"
-            />
+            android:src="@drawable/download" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Name which country's national animal is Royal Bengal Tiger?"
-            android:textSize="20dp"/>
+            android:textSize="20dp" />
+
         <EditText
+            android:id="@+id/ANIMAl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Country name"
-            android:paddingTop="16dp"
+            android:inputType="textCapSentences|textAutoCorrect"
             android:paddingBottom="34dp"
-            android:id="@+id/ANIMAl"
-            android:inputType=
-                "textCapSentences|textAutoCorrect"/>
+            android:paddingTop="16dp" />
 
         <TextView
             android:id="@+id/textView"
@@ -64,122 +61,124 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <CheckBox
+                android:id="@+id/MILK"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/MILK" />
+                android:layout_height="wrap_content" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="milk"
-                />
+                android:text="milk" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <CheckBox
+                android:id="@+id/ICECREAM"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/ICECREAM"/>
+                android:layout_height="wrap_content" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ice-cream"
-                />
+                android:text="ice-cream" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <CheckBox
+                android:id="@+id/WINE"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/WINE"/>
+                android:layout_height="wrap_content" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="wine"/>
+                android:text="wine" />
         </LinearLayout>
-
-
 
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="How much percentage of alcohol contain in beer?"
-                android:textSize="24dp"
                 android:paddingTop="34dp"
-                />
+                android:text="How much percentage of alcohol contain in beer?"
+                android:textSize="24dp" />
+
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="10%"
-                    android:id="@+id/TEN"/>
 
                 <RadioButton
+                    android:id="@+id/TEN"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="20%"
-                    android:id="@+id/TWENTY"/>
+                    android:text="10%" />
 
                 <RadioButton
+                    android:id="@+id/TWENTY"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="30%"
-                    android:id="@+id/THIRTY"/>
+                    android:text="20%" />
+
+                <RadioButton
+                    android:id="@+id/THIRTY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30%" />
             </RadioGroup>
 
-
-
-
         </LinearLayout>
-
-
-
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Submit"
-                    android:id="@+id/SUBMIT"
-                    android:padding="16dp"
-                    android:onClick="SUBMIT"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Score"
-                    android:textSize="20dp"
-                    android:layout_centerInParent="true"
-                    android:id="@+id/SCORE"/>
 
                 <Button
+                    android:id="@+id/SUBMIT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="SUBMIT"
                     android:padding="16dp"
+                    android:text="Submit" />
+
+                <TextView
+                    android:id="@+id/SCORE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Score"
+                    android:textSize="20dp" />
+
+                <Button
                     android:id="@+id/RESET"
-                    android:onClick="RESET"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
+                    android:onClick="RESET"
+                    android:padding="16dp"
                     android:text="Reset" />
             </RelativeLayout>
         </LinearLayout>
-
 
     </LinearLayout>
 
