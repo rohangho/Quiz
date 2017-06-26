@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+
         int c= scorecalculator(milk1,icecream1,a,animal1,name1);
 
         display(c);
@@ -54,14 +56,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public   int scorecalculator (boolean a, boolean b, int c,String d,String e){
+    public   int scorecalculator (boolean a, boolean b, int f,String d,String e){
         int m=0;
-        if (a==b&&b==true)
+        if (a==true&&b==true)
             m=m+1;
-        if(c==1){m=m+1;}
+        if(f==1){m=m+1;}
 
         if (d=="India"){m=m+1;}
-        if (d=="Bill Gates")
+        if (e=="Bill Gates")
             m=m+1;
 
         return m;

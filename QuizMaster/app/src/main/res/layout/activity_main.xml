@@ -13,14 +13,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@drawable/a"
+
         android:id="@+id/LINEAR">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Who is the Richest Man in the World?"
-
             android:textSize="24dp"/>
         <EditText
             android:layout_width="match_parent"
@@ -119,7 +118,8 @@
                 />
             <RadioGroup
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -136,7 +136,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="30%"
-                    android:button="@+id/THIRTY"/>
+                    android:id="@+id/THIRTY"/>
             </RadioGroup>
 
 
