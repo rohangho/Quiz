@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         boolean wine1 = wine.isChecked();
         int j = check(milk1, icecream1, wine1, name1, animal1);
 
-        Toast.makeText(MainActivity.this, "Click!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this, "THE SCORE IS "+j, Toast.LENGTH_SHORT).show();
 
 
         display(check(milk1, icecream1, wine1, name1, animal1));
