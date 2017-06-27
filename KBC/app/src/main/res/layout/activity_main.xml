@@ -5,87 +5,93 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.android.kbc.MainActivity">
+
     <LinearLayout
-        android:id="@+id/LINEAR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="16dp">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Who is the Richest Man in the World?"
-            android:textSize="24dp" />
+            android:textSize="24sp" />
+
         <EditText
-            android:id="@+id/NAME"
+            android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name (first letter of name and surname in capital)"
+            android:hint="Name (first letter of name and surname in \ncapital)"
             android:inputType="textCapSentences|textAutoCorrect"
-            android:onClick="SUBMIT"
             android:paddingBottom="34dp"
             android:paddingTop="16dp" />
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/download" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Name which country's national animal is Royal Bengal Tiger?"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
+
         <EditText
-            android:id="@+id/ANIMAl"
+            android:id="@+id/animal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Country name"
             android:inputType="textCapSentences|textAutoCorrect"
             android:paddingBottom="34dp"
             android:paddingTop="16dp" />
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="34dp"
             android:text="Which of the product is made of milk?"
-            android:textSize="24dp" />
+            android:textSize="24sp" />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <CheckBox
-                android:id="@+id/MILK"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/milk"
+                android:text="milk"
                 android:layout_height="wrap_content"
-                android:text="milk" />
+                android:layout_width="wrap_content"/>
+
+
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <CheckBox
-                android:id="@+id/ICECREAM"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/icecream"
+                android:text="ice-cream"
                 android:layout_height="wrap_content"
-                android:text="ice-cream" />
+                android:layout_width="wrap_content"/>
+
+
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <CheckBox
-                android:id="@+id/WINE"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/wine"
+                android:text="wine"
                 android:layout_height="wrap_content"
-                android:text="wine" />
+                android:layout_width="wrap_content"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -96,11 +102,10 @@
                 android:layout_height="wrap_content"
                 android:paddingTop="34dp"
                 android:text="How much percentage of alcohol contain in beer?"
-                android:textSize="24dp" />
+                android:textSize="24sp" />
             <RadioGroup
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
                 <RadioButton
                     android:id="@+id/TEN"
                     android:layout_width="wrap_content"
@@ -143,7 +148,7 @@
                     android:layout_centerInParent="true"
                     android:text="Score"
                     android:textSize="20dp" />
-           </RelativeLayout>
+            </RelativeLayout>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
