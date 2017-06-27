@@ -3,22 +3,26 @@ package com.example.android.kbc;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    int k=0;
+    int k = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    public  void SUBMIT(View view) {
-        int m=0;
+
+    public void SUBMIT(View view) {
+        int m = 0;
+
         EditText name = (EditText) findViewById(R.id.NAME);
         String name1 = name.getText().toString();
 
@@ -31,17 +35,33 @@ public class MainActivity extends AppCompatActivity {
         CheckBox icecream = (CheckBox) findViewById(R.id.ICECREAM);
         boolean icecream1 = icecream.isChecked();
 
+        CheckBox wine = (CheckBox) findViewById(R.id.WINE);
+        boolean wine1 = wine.isChecked();
+        int j = check(milk1, icecream1, wine1, name1, animal1);
 
-        display(check(milk1,icecream1,name1,animal1));
+        Toast.makeText(MainActivity.this, "Click!", Toast.LENGTH_SHORT).show();
+
+
+        display(check(milk1, icecream1, wine1, name1, animal1));
 
     }
 
-    public  int check(boolean a,boolean b,String d,String e){
-        int c=0;
-        if(a==true){if (b=true){c=c+1;}}
-        if(d.equals("Bill")){c=c+1;}
-        if(e.equals("India")){c=c+1;}
-        return (c+k);
+    public int check(boolean a, boolean b, boolean o, String d, String e) {
+        int c = 0;
+        if (a == true) {
+            if (b = true) {
+                if (o = false) {
+                    c = c + 1;
+                }
+            }
+        }
+        if (d.equals("Bill")) {
+            c = c + 1;
+        }
+        if (e.equals("India")) {
+            c = c + 1;
+        }
+        return (c + k);
     }
 
     public void onRadioButton(View view) {
@@ -67,12 +87,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
-
-    public  void display(int a){
+    public void display(int a) {
         TextView textView = (TextView) findViewById(R.id.SCORE);
-        textView.setText(""+a);
+        textView.setText("" + a);
+
     }
 
 }
