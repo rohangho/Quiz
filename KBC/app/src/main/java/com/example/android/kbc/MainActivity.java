@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    int k;
+    int radioscorebutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,27 +30,31 @@ public class MainActivity extends AppCompatActivity {
         boolean icecream1 = icecream.isChecked();
         CheckBox wine = (CheckBox) findViewById(R.id.wine);
         boolean wine1 = wine.isChecked();
-        int j = check(milk1, icecream1, wine1, name1, animal1);
-        Toast.makeText(MainActivity.this, "THE SCORE IS "+j, Toast.LENGTH_SHORT).show();
-        display(j);
+        int finalscore = check(milk1, icecream1, wine1, name1, animal1);
+        Toast.makeText(MainActivity.this, "THE SCORE IS "+finalscore, Toast.LENGTH_SHORT).show();
+        display(finalscore);
     }
 
     public int check(boolean a, boolean b, boolean o, String d, String e) {
-        int c = 0;
+        int score = 0;
+        int f=0;
         if (a == true) {
             if (b == true) {
                 if (o == false) {
-                    c = c + 1;
+                    score = score + 1;
                 }
             }
         }
         if (d.equals("Bill")) {
-            c = c + 1;
+            score = score + 1;
         }
         if (e.equals("India")) {
-            c = c + 1;
+            score = score + 1;
         }
-        return (c + k);
+        else {
+            f=f+1;
+        }
+        return (score + radioscorebutton);
     }
 
     public void onRadioButton(View view) {
@@ -59,17 +63,17 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.TEN:
                 if (checked) {
-                    k++;
+                    radioscorebutton++;
                 }
                 break;
             case R.id.TWENTY:
                 if (checked) {
-                    k = 0;
+                    radioscorebutton = 0;
                 }
                 break;
             case R.id.THIRTY:
                 if (checked) {
-                    k = 0;
+                    radioscorebutton = 0;
                 }
                 break;
         }
